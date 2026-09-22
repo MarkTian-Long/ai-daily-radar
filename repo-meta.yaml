@@ -1,0 +1,15 @@
+name: ai-daily-radar
+visibility: public
+description: "Reusable AI intelligence digests for ChatGPT/agents: Follow Builders + AIHOT with freshness checks, coverage auditing and event-level deduplication."
+homepage: ""
+topics:
+  - ai
+  - artificial-intelligence
+  - chatgpt
+  - automation
+  - agents
+  - ai-news
+  - prompt-engineering
+  - daily-digest
+  - codex
+  - claude-code
