@@ -1,0 +1,34 @@
+# AI Daily Radar
+
+> Reusable two-source AI intelligence workflow with explicit freshness and coverage auditing.
+
+## Agent entrypoints
+- Read: ./AGENTS.md
+- Machine-readable task manifest: ./manifest.yaml
+- Skill router: ./SKILL.md
+
+## Tasks
+- follow-builders-daily -> ./prompts/follow-builders-daily.zh-CN.md
+- aihot-daily -> ./prompts/aihot-daily.zh-CN.md
+
+## Execution order
+1. Read AGENTS.md and manifest.yaml.
+2. Select one task unless the user explicitly requests both.
+3. Read the selected prompt in full.
+4. Check ./docs/source-contracts.md and the current upstream contract.
+5. Execute the task while preserving freshness, pagination, deduplication, and coverage rules.
+
+## Important scope rule
+AIHOT coverage grade A means the queried public pool/window was paginated to completion. It does not mean the entire AIHOT database or the whole web was captured.
+
+## Upstreams
+- Follow Builders: https://github.com/zarazhangrui/follow-builders
+- AIHOT Agent contract: https://aihot.news/agent
+- AIHOT OpenAPI v1: https://aihot.news/openapi-v1.json
+
+## More docs
+- ./docs/quickstart.md
+- ./docs/architecture.md
+- ./docs/source-contracts.md
+- ./docs/origin.md
+- ./THIRD_PARTY.md
