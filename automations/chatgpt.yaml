@@ -1,0 +1,25 @@
+# Reference configuration only. This is intentionally human/agent readable rather than a private ChatGPT API export.
+# Copy the prompt files into your scheduler/automation platform.
+
+automations:
+  - title: Follow Builders 日报
+    task_id: follow-builders-daily
+    timing_mode: exact_schedule
+    timezone: Asia/Shanghai
+    ical: |
+      BEGIN:VEVENT
+      DTSTART;TZID=Asia/Shanghai:20260101T080000
+      RRULE:FREQ=DAILY
+      END:VEVENT
+    prompt_file: prompts/follow-builders-daily.zh-CN.md
+
+  - title: AIHOT 每日情报
+    task_id: aihot-daily
+    timing_mode: exact_schedule
+    timezone: Asia/Shanghai
+    ical: |
+      BEGIN:VEVENT
+      DTSTART;TZID=Asia/Shanghai:20260101T081000
+      RRULE:FREQ=DAILY
+      END:VEVENT
+    prompt_file: prompts/aihot-daily.zh-CN.md
