@@ -1,0 +1,51 @@
+schema_version: 1
+release_version: 0.1.0
+project:
+  name: ai-daily-radar
+  language_default: zh-CN
+  purpose: "Reusable two-source AI intelligence digests with explicit freshness and coverage auditing."
+  redistribution_policy: "Do not mirror upstream content; link to original/upstream sources."
+
+tasks:
+  - id: follow-builders-daily
+    name: Follow Builders 日报
+    prompt: prompts/follow-builders-daily.zh-CN.md
+    schedule:
+      timezone: Asia/Shanghai
+      local_time: "08:00"
+      cadence: daily
+      timing_mode: exact
+    upstream:
+      repository: https://github.com/zarazhangrui/follow-builders
+      authority: main branch
+    output:
+      language: zh-CN
+      delivery: in-chat
+    guarantees:
+      - check_upstream_before_run
+      - distinguish_no_content_from_stale_feed
+      - cross_day_dedup
+      - podcast_two_day_zero_fallback
+
+  - id: aihot-daily
+    name: AIHOT 每日情报
+    prompt: prompts/aihot-daily.zh-CN.md
+    schedule:
+      timezone: Asia/Shanghai
+      local_time: "08:10"
+      cadence: daily
+      timing_mode: exact
+    upstream:
+      agent_contract: https://aihot.news/agent
+      openapi: https://aihot.news/openapi-v1.json
+      api_base: https://aihot.news/api/v1
+    output:
+      language: zh-CN
+      delivery: in-chat
+    guarantees:
+      - check_upstream_before_run
+      - explicit_coverage_grade
+      - completeness_scoped_to_public_pool
+      - cursor_chain_integrity
+      - event_level_dedup
+      - original_source_verification_for_critical_claims
