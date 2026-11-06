@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-11-06
+
+- Synced the reusable Follow Builders and AIHOT prompts with their current ChatGPT daily-task rules; preserved separate data sources and coverage boundaries.
+- Added post-report Blog research candidates (0–5) with published-article/backlog cross-check and **no automatic GitHub writes** before a user's explicit approval.
+- Added AIHOT Markdown emphasis validation and clarified that B coverage requires a successful Hot Topics/Daily lookup.
+- Kept current AIHOT canonical aihot.news instead of reviving a redirected legacy domain.
+- Preserved the existing 08:00 / 08:10 schedules; created no second automation.
+
 ## 0.1.0 — 2026-09-21
 
 - Extracted two long-running daily AI intelligence workflows into a reusable public structure.
