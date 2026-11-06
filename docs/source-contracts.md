@@ -19,6 +19,8 @@ Authority: `https://github.com/zarazhangrui/follow-builders` main branch.
 
 Canonical agent integration page: `https://aihot.news/agent`
 
+Official Agent integration page checked 2026-11-06: integration contract version 2.0.0; REST endpoints remain under `/api/v1`. Earlier `https://aihot.virxact.com/agent` redirects to the canonical host, so do not copy that legacy URL from an older live automation. Verify endpoint/schema behavior at execution time.
+
 OpenAPI v1: `https://aihot.news/openapi-v1.json`
 
 REST base: `https://aihot.news/api/v1`
