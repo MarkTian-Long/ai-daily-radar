@@ -12,6 +12,9 @@ automations:
       RRULE:FREQ=DAILY
       END:VEVENT
     prompt_file: prompts/follow-builders-daily.zh-CN.md
+    post_report_blog_candidates: suggestion_only
+    blog_target_example: MarkTian-Long/marktian-long.github.io
+    blog_writes_require_explicit_user_confirmation: true
 
   - title: AIHOT 每日情报
     task_id: aihot-daily
@@ -23,3 +26,6 @@ automations:
       RRULE:FREQ=DAILY
       END:VEVENT
     prompt_file: prompts/aihot-daily.zh-CN.md
+    post_report_blog_candidates: suggestion_only
+    blog_target_example: MarkTian-Long/marktian-long.github.io
+    blog_writes_require_explicit_user_confirmation: true
