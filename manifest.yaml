@@ -1,5 +1,5 @@
 schema_version: 1
-release_version: 0.1.0
+release_version: 0.2.0
 project:
   name: ai-daily-radar
   language_default: zh-CN
@@ -26,6 +26,8 @@ tasks:
       - distinguish_no_content_from_stale_feed
       - cross_day_dedup
       - podcast_two_day_zero_fallback
+      - blog_candidates_only_after_report
+      - blog_writes_require_explicit_user_confirmation
 
   - id: aihot-daily
     name: AIHOT 每日情报
@@ -49,3 +51,10 @@ tasks:
       - cursor_chain_integrity
       - event_level_dedup
       - original_source_verification_for_critical_claims
+      - markdown_emphasis_validation
+      - blog_candidates_only_after_report
+      - blog_writes_require_explicit_user_confirmation
+
+# The author's reference setup uses MarkTian-Long/marktian-long.github.io.
+# Reusers may configure their own Blog target. Candidates are advisory only;
+# no automated Blog writes without explicit follow-up user approval.
